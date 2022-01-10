@@ -1,5 +1,5 @@
 //Angular eingebunden!
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 //HTML/SCSS/CSS eingebunden!
 @Component({
@@ -10,8 +10,16 @@ import { Component } from '@angular/core';
 
 
 //Java Script
-export class AppComponent {
-  title = 'Angular_Projekt';
+export class AppComponent implements OnInit{
+  images = ['laptop.jpg','codes.jpg','uni.jpg'];
+
+  ngOnInit(){
+    this.updateImage();
+  }
+
+  updateImage() {
+    
+  }
 
 
 
