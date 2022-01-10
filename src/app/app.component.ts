@@ -12,6 +12,8 @@ import { Component, OnInit } from '@angular/core';
 //Java Script
 export class AppComponent implements OnInit{
   images = ['laptop.jpg','codes.jpg','uni.jpg'];
+  currentImage = 0;
+  showImage = true;
 
   ngOnInit(){
     this.updateImage();
@@ -19,9 +21,21 @@ export class AppComponent implements OnInit{
 
   updateImage() {
     
+    setInterval(() => {
+
+    this.currentImage++;
+    this.currentImage = this.currentImage % this.images.length;
+    this.showImage = false;
+
+    setTimeout(()=>{
+      this.showImage = true;
+    }, 10);
+    }, 8000);
   }
+  } 
 
 
 
 
-}
+
+
