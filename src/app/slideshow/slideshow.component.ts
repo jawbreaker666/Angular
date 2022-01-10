@@ -1,21 +1,17 @@
-//Angular eingebunden!
 import { Component, OnInit } from '@angular/core';
 
-//HTML/SCSS/CSS eingebunden!
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-slideshow',
+  templateUrl: './slideshow.component.html',
+  styleUrls: ['./slideshow.component.scss']
 })
+export class SlideshowComponent implements OnInit {
 
-
-//Java Script
-export class AppComponent implements OnInit{
   images = ['laptop.jpg','codes.jpg','uni.jpg'];
   headlines = ['Coding next Level!','Learning to read codes','Certificate teachers in the universitate'];
   currentImage = 0;
   showImage = true;
-
+  
   ngOnInit(){
     this.updateImage();
   }
@@ -33,10 +29,10 @@ export class AppComponent implements OnInit{
     }, 10);
     }, 8000);
   }
-  } 
 
+  constructor() { }
 
-
-
+  
+  }
 
 
