@@ -1,5 +1,6 @@
 //Angular eingebunden!
 import { Component, OnInit } from '@angular/core';
+import { Router} from '@angular/router';
 
 //HTML/SCSS/CSS eingebunden!
 @Component({
@@ -10,6 +11,11 @@ import { Component, OnInit } from '@angular/core';
 
 
 //Java Script
-export class AppComponent{}
+export class AppComponent{
+ 
+  constructor(public router: Router){ }
+
+
+}
 
 
